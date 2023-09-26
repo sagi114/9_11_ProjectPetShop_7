@@ -1,0 +1,57 @@
+﻿@model _9_11_ProjectPetShop_1.Models.Animals
+@{
+    ViewData["Title"] = "AddAnimale";
+}
+    <div class="FormClass">
+        <h4>Add Animale</h4>
+        <form asp-action="UploadAnimalWithImage"
+              asp-controller="Home"
+              method="post"
+              enctype="multipart/form-data">
+            <label for="Catagories">Choose a catagory:</label>
+            <select class="dropdown-el" name="CategoryId" id="CategoryId">
+                @foreach (var catagoryItem in ViewBag.CatagortList)
+                {
+                    <option value="@catagoryItem.Id">@catagoryItem.Name</option>
+                }
+            </select>
+            @if (ViewBag.isValid == false)
+            {
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>You didnt input the right information please try again!!!!!</strong><br /> @Html.ValidationSummary()
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+            <div>
+                @Html.LabelFor(a => a.Name)
+            </div>
+            <div>
+                @Html.EditorFor(a => a.Name)
+            </div>
+            <div>
+                @Html.LabelFor(a => a.Age)
+            </div>
+            <div>
+                @Html.EditorFor(a => a.Age)
+            </div>
+            <div>
+                @Html.LabelFor(a => a.Description)
+            </div>
+            <div>
+                @Html.EditorFor(a => a.Description)
+            </div>
+            <div>
+                @Html.LabelFor(a => a.Image.ImageTitle)
+            </div>
+            <div>
+                @Html.TextBoxFor(a => a.Image.ImageTitle, new { type = "file", name = "file1", id = "file1", multiple = "multiple" })
+                <input class="text-box single-line" data-val="true" data-val-required="Please enter a file picture." id="Image_ImageTitle" name="Image.ImageTitle" type="hidden" value="null" />
+            </div>
+            <button onclick="submit()" type="submit">Insert</button>
+        </form>
+    </div>
+
+
+

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<_9_11_ProjectPetShop_1.Models.Animals>
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+<h4>
+    @if (ViewBag.TitleOfCatalog != "")
+    {<span>Catalog of @ViewBag.TitleOfCatalog:</span>}
+    else
+    {<span>Catalog:</span>}
+</h4>
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Choose a catagory:</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a asp-action="Catalog" asp-route-CatagorySelect="0">All-animals</a>
+        @foreach (var catagoryItem in ViewBag.CatagortList)
+        {
+            <a href="Catalog?CatagorySelect=@catagoryItem.Id">@catagoryItem.Name</a>
+        }
+    </div>
+</div>
+<table class="table table-dark catalogTable">
+    <thead class="bg-warning">
+        <tr>
+            <th class="LeftTopScop" scope="col">#</th>
+            <th scope="col">Name:</th>
+            <th scope="col">Picture Name:</th>
+            <th class="RightTopScop" scope="col">Details:</th>
+        </tr>
+    </thead>
+    @foreach (var Animale in Model)
+    {
+<tr class="bg-dark">
+    <th class="LeftBottemScop" scope="row">@(@ViewBag.caunter++)</th>
+    <td>@Animale.Name</td>
+    <td><img alt="@Animale.Image.ImageData" src="data:image/jpg;base64,@Convert.ToBase64String(Animale.Image.ImageData)"/></td>
+    <td class="RightBottemScop"><a class="LinkButton" asp-action="Details" asp-route-animaleId="@Animale.Id">Details</a></td>
+</tr>
+    }
+</table>
+
+
+

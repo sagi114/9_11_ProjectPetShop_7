@@ -1,0 +1,192 @@
+﻿body {
+    /*background-color:cornflowerblue;*/
+    /*background: url() no-repeat center center fixed;*/
+    /*background-image: url('../images/lego.jpg');*/
+    background-image: url('../images/euc1rfcxyaepwdy-1585815645.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /*background-size:contain;*/
+}
+img{
+    width:100px;
+    height:130px;
+}
+.form-control {
+    max-width: 150px;
+    text-align: center;
+}
+detailsComments {
+    text-align: start;
+}
+
+.LeftTopScop{
+    border-top-left-radius:10px;
+}
+.LeftBottemScop {
+    border-bottom-left-radius: 10px;
+}
+.RightTopScop {
+    border-top-right-radius: 10px;
+}
+
+.RightBottemScop {
+    border-bottom-right-radius: 10px;
+}
+table {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+h4 {
+    font-family: impact;
+}
+.continer {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+.LinkButton{
+    border-color:black;
+    border-radius:4px;
+    border-style:solid;
+    background-color:lightgrey;
+    color:black;
+    padding:5px;
+}
+.LinkButtonDiv
+{
+    margin:10px;
+}
+.dropdown-el {
+    margin:15px;
+    min-width: 12em;
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    min-height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    top: .5em;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #444;
+    outline: none;
+    border: .06em solid transparent;
+    border-radius: 1em;
+    background-color: white;
+}
+.submit {
+    border-radius: 5px;
+    border: thick;
+    background-color: white;
+    border: 1px solid black;
+}
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+.active {
+    background-color: mediumpurple;
+}
+.alert {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius:2px;
+}
+.MainText {
+    z-index: 100;
+    background-color: mediumpurple;
+    font-family: impact;
+    font-style: italic;
+    font-variant: small-caps;
+    position: fixed;
+    bottom: 0;
+    max-width: none;
+    width: 100%;
+}
+.FormClass {
+    background-color: mediumpurple;
+    width: 30%;
+    margin: auto;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius:7px;
+}
+.catalogTable{
+    width:100px;
+}
+.dropbtn {
+    background-color: mediumorchid;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: 3px solid black;
+    height:70%;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: mediumorchid;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: mediumpurple;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown a:hover {
+    background-color: mediumorchid;
+}
+.show {
+    display: block;
+}

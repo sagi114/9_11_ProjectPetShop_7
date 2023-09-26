@@ -1,0 +1,40 @@
+﻿@model _9_11_ProjectPetShop_1.Models.Comments
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <h4>Details of @ViewBag.Animale.Name</h4>
+    <table class="table table-dark">
+        <tr>
+            <td>Name:</td>
+            <td>Picture Name:</td>
+            <td>Age:</td>
+            <td>Description:</td>
+            <td>Category:</td>
+            <td>Comments:</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.Animale.Name</td>
+            <td><img alt="@ViewBag.Animale.Name" src="data:image/jpg;base64,@Convert.ToBase64String(ViewBag.Animale.Image.ImageData)" /></td>
+            <td>@ViewBag.Animale.Age</td>
+            <td>@ViewBag.Animale.Description</td>
+            <td>@ViewBag.Animale.Category.Name</td>
+            <td>
+                <form action="AddAComment" method="get">
+                    <div>
+                        @Html.LabelFor(model => model.Comment)
+                    </div>
+                    @foreach (var Comment in @ViewBag.Animale.Comments)
+                    {
+                        <div>@(ViewBag.Caunter++)) @Comment.Comment</div>
+                    }
+                <div>
+                    @Html.EditorFor(model => model.Comment)
+                </div>
+                    <input type="hidden" name="animaleId" id="animaleId" value="@ViewBag.Animale.Id" />
+                    <input type="submit" value="Add" />
+                </form>
+            </td>
+        </tr>
+    </table>
+
